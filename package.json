@@ -2,7 +2,7 @@
   "name": "angularherokuspotify2020",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
