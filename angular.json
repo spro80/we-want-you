@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blogyager": {
+    "angularherokuspotify2020": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blogyager",
+            "outputPath": "dist/angularherokuspotify2020",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "blogyager:build"
+            "browserTarget": "angularherokuspotify2020:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "blogyager:build:production"
+              "browserTarget": "angularherokuspotify2020:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blogyager:build"
+            "browserTarget": "angularherokuspotify2020:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "blogyager:serve"
+            "devServerTarget": "angularherokuspotify2020:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "blogyager:serve:production"
+              "devServerTarget": "angularherokuspotify2020:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "blogyager",
+  "defaultProject": "angularherokuspotify2020",
   "cli": {
     "analytics": "e592aff0-f7c1-4510-b548-5e27fbc2f094"
   }
