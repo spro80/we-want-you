@@ -1,15 +1,18 @@
-
 <div class="content" role="main">
-  <span>{{ title }} app is running!</span>
+  <span>{{ title }} app is running!!</span>
+  <br>
+  <span>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputAlbumOrArtist">Album or Artist</label>
+        <input type="email" class="form-control" id="exampleInputAlbumOrArtist" 
+               aria-describedby="albumOrArtistHelp" placeholder="Enter Album or Artist"
+               [(ngModel)]="formulario.album_or_artist" name="album_or_artist">
+        <button (click)="searchInSpotify()">Search!</button>
+      </div>
+    </form>
+  </span>  
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
 
