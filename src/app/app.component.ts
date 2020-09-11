@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { SpotifyService } from './services/spotify.service';
-import { identifierModuleUrl } from '@angular/compiler';
+//import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +38,7 @@ export class AppComponent {
           console.log(data);
           this.items = data;
         });
-        
+
   }
 
 }
