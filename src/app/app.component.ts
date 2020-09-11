@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { SpotifyService } from './services/spotify.service';
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +9,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  formulario = {
-    album_or_artist: ''
-  }
 
+  form = {
+    search: '',
+    typeSearch: 'album'
+  }
   title = 'SPOTIFY SEARCH';
 
-  searchInSpotify(){
-    let search_by_album_or_artist = this.formulario.album_or_artist
-    console.log( search_by_album_or_artist )
+  nuevasCanciones: any[] = [];
+  artists: any[] = [];
+  items: any[] = [];
+
+
+  constructor(private http: HttpClient,
+              private spotify: SpotifyService
+  ) {
   }
 
+  searchInSpotify(){
+    let search = this.form.search;
+    console.log( search );
+  }
+
+  getArtistsV2( search, typeSearch ) {
+
+    this.spotify.getArtistsServiceV2( search, typeSearch )
+        .subscribe( (data: any) => {
+          console.log(data);
+          this.items = data;
+        });
+        
+  }
 
 }
