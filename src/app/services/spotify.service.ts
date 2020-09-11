@@ -12,7 +12,7 @@ export class SpotifyService {
   }
 
   getArtistsServiceV2( search, typeSearch ) {
-    const accessToken = 'BQDkKW_LdDcOgjrfkSDUtypHM9d-KQT336y39rY0r_NHKFB1Gl3L5EE6p-UDXAmFKEdD-zfBf4JfM4eVY_0';
+    const accessToken = 'BQBW6wm4cquoZMXDnk-yJm6LQeHSoQYgb75LxqG7WmSzDUWiIq83KGho0xjndsTlxg4bqvhVCXKsRKrSJPA';
     const headers = this.createHeaders( accessToken );
 
     const baseUrl = 'https://api.spotify.com';
