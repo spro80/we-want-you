@@ -1,19 +1,21 @@
 <div class="content" role="main">
-  <span>{{ title }} app is running!!</span>
+  <span>{{ title }} app is running...</span>
   <br>
   <span>
     <form>
       <div class="form-group">
         <label for="exampleInputAlbumOrArtist">Album or Artist</label>
-        <input type="email" class="form-control" id="exampleInputAlbumOrArtist" 
-               aria-describedby="albumOrArtistHelp" placeholder="Enter Album or Artist"
-               [(ngModel)]="formulario.album_or_artist" name="album_or_artist">
-        <button (click)="searchInSpotify()">Search!</button>
+        
+        <input type="radio" value="album" name="typeSearch" [(ngModel)]="form.typeSearch"> Album
+        <input type="radio" value="artist" name="typeSearch" [(ngModel)]="form.typeSearch"> Artist
+
+        <input type="search" class="form-control" id="exampleInputAlbumOrArtist" 
+              aria-describedby="albumOrArtistHelp" placeholder="Enter Album or Artist"
+              [(ngModel)]="form.search" name="search">
+        <button (click)="getArtistsV2(form.search, form.typeSearch);">Search...</button>
       </div>
     </form>
   </span>  
 </div>
-
-
 
 <router-outlet></router-outlet>
