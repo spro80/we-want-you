@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators'
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -12,7 +12,7 @@ export class SpotifyService {
   }
 
   getArtistsServiceV2( search, typeSearch ) {
-    const accessToken = 'BQDrKjMGvA0G1dkdTPT4Ql52gqaZCvU6casuMcouZL5lUFRSlQnKGKc_WoYU8Ytgkpp0X1Kea9_K2BpexaA';
+    const accessToken = 'BQBlKGixeEIlJyeL4gstWYcP3M4jC5vOGJmjQzt3Bn8RwGXQVndE-KHNihzPeaPaoiPqQ5wWR2usVLIowpA';
     const headers = this.createHeaders( accessToken );
 
     const baseUrl = 'https://api.spotify.com';
